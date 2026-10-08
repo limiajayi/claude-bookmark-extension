@@ -2,6 +2,8 @@
 
 Chrome extension (Manifest V3, built with WXT) that bookmarks a Claude prompt and its response from claude.ai. Everything is stored locally with `chrome.storage.local`.
 
+![Demo of a bookmark extension being used on claude.ai](demo/demo.gif)
+
 ## Run it
 
 ```bash
@@ -29,6 +31,7 @@ Other scripts: `pnpm test`, `pnpm compile` (type-check).
 
 ## Some caveats
 
-- This works based on prompt-response pairings within the DOM, if the extension doesn't find the "prompt" or "response" selectors, it won't work
-- This is based on how `claude.ai` **currently** arranges their DOM and how it currently streams tokens, which is subject to change in the future
-- Copying prompts doesn't work yet
+- All prompt-response pairs are stored **in plain text** in `chrome.storage.local` so be wary of bookmarking sensitive information.
+- This works based on prompt-response pairings within the DOM, if the extension doesn't find the "prompt" or "response" selectors, it won't work.
+- This is based on how `claude.ai` **currently** arranges their DOM and how it currently streams tokens, which is subject to change in the future.
+- Copying prompts doesn't work yet.
