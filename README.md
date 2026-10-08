@@ -2,7 +2,7 @@
 
 Chrome extension (Manifest V3, built with WXT) that bookmarks a Claude prompt and its response from claude.ai. Everything is stored locally with `chrome.storage.local`.
 
-![Demo of a bookmark extension being used on claude.ai](demo/demo.gif)
+![Demo of a bookmark extension being used on claude.ai](demo/demo.mp4)
 
 ## Run it
 
