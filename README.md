@@ -26,3 +26,9 @@ Other scripts: `pnpm test`, `pnpm compile` (type-check).
 | `entrypoints/popup/` | The popup: search, copy, open chat, delete |
 | `utils/storage.ts` | Reads and writes bookmarks |
 | `tests/extract.test.ts` | Fixture-based tests. Update the fixture when Claude's markup changes. |
+
+## Some caveats
+
+- This works based on prompt-response pairings within the DOM, if the extension doesn't find the "prompt" or "response" selectors, it won't work
+- This is based on how `claude.ai` **currently** arranges their DOM and how it currently streams tokens, which is subject to change in the future
+- Copying prompts doesn't work yet
